@@ -413,7 +413,63 @@
 </div>
 </div>
 </div>
+
+<!-- Voices from the Field -->
+<section class="py-16 bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-margin-desktop relative overflow-hidden rounded-2xl py-16">
+<div class="absolute top-4 left-8">
+<span class="material-symbols-outlined text-secondary-container opacity-20 text-[160px]">format_quote</span>
+</div>
+<div class="relative z-10 flex flex-col items-center">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-12 text-center">Voices from the Field</h2>
+<div class="flex transition-transform duration-500 ease-in-out hide-scrollbar overflow-x-auto snap-x snap-mandatory gap-gutter w-full pb-8" id="home-quote-carousel">
+<!-- Quote 1 -->
+<div class="snap-center shrink-0 w-full md:w-[700px] bg-white p-8 rounded-2xl shadow-lg border border-secondary-neutral flex flex-col">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4" style="font-variation-settings: &quot;FILL&quot; 1;">format_quote</span>
+<p class="font-body-lg text-body-lg italic text-on-surface-variant mb-6 leading-relaxed">
+"The PAs and LVs are not, in my view, sufficiently knowledgeable about the field, despite how they may present themselves. The public comment process for the RFQs has consistently proven ineffective and appears to be little more than a formality. To date, there has been no meaningful indication that the PAs or LVs have seriously considered or incorporated stakeholder feedback. Year after year, they introduce pricing structures that negatively impact both contractors and the public. Whether they fully understand the consequences of these decisions remains unclear. What is clear, however, is that continued disregard for industry input and public concerns cannot persist indefinitely. Eventually, there will need to be accountability for the harm these policies have caused."
+</p>
+</div>
+<!-- Quote 2 -->
+<div class="snap-center shrink-0 w-full md:w-[700px] bg-white p-8 rounded-2xl shadow-lg border border-secondary-neutral flex flex-col">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4" style="font-variation-settings: &quot;FILL&quot; 1;">format_quote</span>
+<p class="font-body-lg text-body-lg italic text-on-surface-variant mb-6 leading-relaxed">
+"The program needs to change. It needs a change at the administrative level because they don't know what they're doing and at the lead vendor level because they don't care what they're doing. Year after year, we're asked to absorb cuts, accept unfair pricing, and carry the burden of decisions made without meaningful input from those most affected. The people making these decisions see us as a problem to manage rather than partners in delivering essential services. Enough is enough."
+</p>
+</div>
+</div>
+<!-- Carousel Controls -->
+<div class="flex gap-4 mt-8">
+<button class="w-12 h-12 flex items-center justify-center rounded-full border border-primary text-primary hover:bg-primary hover:text-white transition-all" onclick="scrollHomeCarousel(-1)">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<div class="flex items-center gap-2">
+<div class="active-dot" id="home-dot-0"></div>
+<div class="inactive-dot" id="home-dot-1"></div>
+</div>
+<button class="w-12 h-12 flex items-center justify-center rounded-full border border-primary text-primary hover:bg-primary hover:text-white transition-all" onclick="scrollHomeCarousel(1)">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
 </section>
+<script>
+(function() {
+  var carousel = document.getElementById('home-quote-carousel');
+  var dots = [document.getElementById('home-dot-0'), document.getElementById('home-dot-1')];
+  var current = 0;
+  window.scrollHomeCarousel = function(dir) {
+    current = (current + dir + dots.length) % dots.length;
+    var cardWidth = carousel.querySelector('.snap-center').offsetWidth + 24;
+    carousel.scrollTo({ left: current * cardWidth, behavior: 'smooth' });
+    dots.forEach(function(d, i) {
+      d.className = i === current ? 'active-dot' : 'inactive-dot';
+    });
+  };
+})();
+</script>
+
 <!-- Bottom CTA -->
 <section class="bg-primary-container text-on-primary-container py-24 relative overflow-hidden">
 <div class="max-w-container-max mx-auto px-margin-desktop text-center relative z-10 transition-all duration-700 ease-out opacity-100 translate-y-0">
