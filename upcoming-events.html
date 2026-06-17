@@ -300,6 +300,77 @@ View Materials <span class="material-symbols-outlined text-[18px]">arrow_forward
   setInterval(function () { goTo(current + 1); }, 5000);
 })();
 </script>
+
+<!-- MA State House and Senate Meetings Carousel -->
+<section class="mb-16">
+<div class="mb-8">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-2">MA State House and Senate Meetings</h2>
+<p class="font-body-md text-on-surface-variant">Committee hearings and legislative events at the Massachusetts State House relevant to the residential contracting industry. <a href="https://malegislature.gov/Events/Hearings" target="_blank" rel="noopener" class="text-primary underline hover:text-secondary transition-colors">View all hearings on malegislature.gov</a></p>
+</div>
+<div class="relative">
+<div class="overflow-x-auto hide-scrollbar snap-x snap-mandatory flex gap-6 pb-4" id="statehouse-carousel">
+<!-- Card 1 -->
+<div class="snap-center shrink-0 w-full md:w-[560px] bg-white rounded-2xl shadow-level-1 border border-surface-warm-gray p-8 flex flex-col">
+<div class="flex items-center gap-2 mb-3">
+<span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-primary-fixed text-primary uppercase tracking-wider">Completed</span>
+<span class="font-label-sm text-on-surface-variant">Senate Committee</span>
+</div>
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary text-[20px]">calendar_today</span>
+<span class="font-label-sm text-on-surface-variant uppercase tracking-wider">May 27, 2026 · 10:30 AM</span>
+</div>
+<h3 class="font-headline-md text-on-surface mb-2">Senate Committee on Climate Change and Global Warming</h3>
+<p class="font-label-md text-secondary mb-3">The Value of the Mass Save Program</p>
+<p class="font-body-md text-on-surface-variant flex-grow mb-4">Virtual hearing examining the value and impact of the Mass Save program, including its role in residential energy efficiency delivery and contractor partnerships.</p>
+<div class="flex items-center gap-2 mb-6 text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+<span class="font-label-sm">Virtual Hearing</span>
+</div>
+<a href="https://malegislature.gov/Events/Hearings/Detail/5690" target="_blank" rel="noopener" class="inline-flex items-center gap-2 font-label-md text-primary hover:text-secondary transition-colors">
+View Hearing Details <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Controls -->
+<div class="flex items-center justify-center gap-4 mt-8">
+<button onclick="statehouseScroll(-1)" class="w-12 h-12 flex items-center justify-center rounded-full border border-primary text-primary hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<div class="flex gap-2" id="statehouse-dots"></div>
+<button onclick="statehouseScroll(1)" class="w-12 h-12 flex items-center justify-center rounded-full border border-primary text-primary hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</section>
+<script>
+(function () {
+  var el = document.getElementById('statehouse-carousel');
+  var dotsEl = document.getElementById('statehouse-dots');
+  var cards = el.querySelectorAll('.snap-center');
+  var total = cards.length;
+  var current = 0;
+  for (var i = 0; i < total; i++) {
+    var d = document.createElement('div');
+    d.id = 'sh-dot-' + i;
+    d.className = i === 0
+      ? 'w-2.5 h-2.5 rounded-full bg-primary transition-all'
+      : 'w-2 h-2 rounded-full bg-outline-variant transition-all';
+    dotsEl.appendChild(d);
+  }
+  function goTo(idx) {
+    current = (idx + total) % total;
+    var cardW = cards[0].offsetWidth + 24;
+    el.scrollTo({ left: current * cardW, behavior: 'smooth' });
+    for (var i = 0; i < total; i++) {
+      document.getElementById('sh-dot-' + i).className = i === current
+        ? 'w-2.5 h-2.5 rounded-full bg-primary transition-all'
+        : 'w-2 h-2 rounded-full bg-outline-variant transition-all';
+    }
+  }
+  window.statehouseScroll = function (dir) { goTo(current + dir); };
+})();
+</script>
 <!-- Featured Event (Bento Style) -->
 
 <!-- Monthly Calendar Grid -->
