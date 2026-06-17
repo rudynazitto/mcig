@@ -1,0 +1,302 @@
+<!DOCTYPE html><html lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Mass Save Budgetary Impact Analysis | MCIG</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&amp;family=Source+Serif+4:wght@600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@100..900&amp;family=Work+Sans:wght@100..900&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-on-surface": "#f3f0ed",
+                        "secondary-container": "#fd844a",
+                        "inverse-surface": "#30302f",
+                        "on-tertiary-container": "#fffaff",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed-variant": "#7c2e00",
+                        "primary-container": "#6b7768",
+                        "primary-fixed-dim": "#becab9",
+                        "surface-container-highest": "#e4e2df",
+                        "surface-variant": "#e4e2df",
+                        "outline": "#747872",
+                        "surface-container-high": "#eae8e5",
+                        "on-tertiary-fixed": "#27171b",
+                        "surface-dim": "#dcdad7",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed-dim": "#dcbfc5",
+                        "surface-container": "#f0edea",
+                        "on-tertiary-fixed-variant": "#564146",
+                        "tertiary-fixed": "#f9dbe1",
+                        "tertiary-container": "#866e73",
+                        "tertiary": "#6c565b",
+                        "on-surface-variant": "#444842",
+                        "on-primary-fixed-variant": "#3e4a3c",
+                        "primary-fixed": "#d9e6d4",
+                        "outline-variant": "#c4c8c0",
+                        "error-container": "#ffdad6",
+                        "surface-warm-gray": "#E8E6E0",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed": "#ffdbcd",
+                        "on-primary-fixed": "#141e13",
+                        "on-background": "#1b1c1a",
+                        "on-secondary-fixed": "#360f00",
+                        "error": "#ba1a1a",
+                        "surface": "#fbf9f6",
+                        "secondary-fixed-dim": "#ffb596",
+                        "background": "#fbf9f6",
+                        "on-secondary": "#ffffff",
+                        "on-primary-container": "#f2ffec",
+                        "surface-bright": "#fbf9f6",
+                        "on-primary": "#ffffff",
+                        "terracotta-dark": "#C95B2A",
+                        "inverse-primary": "#becab9",
+                        "surface-container-low": "#f6f3f0",
+                        "surface-tint": "#566253",
+                        "slate-muted": "#5A6657",
+                        "primary": "#535e50",
+                        "surface-cream": "#F7F7F5",
+                        "on-secondary-container": "#6a2600",
+                        "on-error": "#ffffff",
+                        "on-surface": "#1b1c1a",
+                        "secondary": "#a14005"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-md": "16px",
+                        "stack-sm": "8px",
+                        "stack-lg": "32px",
+                        "margin-desktop": "48px",
+                        "container-max": "1280px",
+                        "unit": "4px",
+                        "margin-mobile": "20px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Work Sans"],
+                        "label-sm": ["Work Sans"],
+                        "headline-lg-mobile": ["\"Source Serif 4\""],
+                        "body-lg": ["Work Sans"],
+                        "label-md": ["Work Sans"],
+                        "headline-lg": ["\"Source Serif 4\""],
+                        "headline-md": ["\"Source Serif 4\""],
+                        "display-lg": ["\"Source Serif 4\""]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        body {
+            background-color: #fbf9f6;
+            color: #1b1c1a;
+            font-family: 'Work Sans', sans-serif;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body-md text-body-md">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface shadow-sm h-20">
+<div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-full">
+<div class="font-headline-md text-headline-md font-bold text-primary">MCIG</div>
+<nav class="hidden md:flex gap-gutter items-center">
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors" href="the-pricing-issue.html">The Pricing Issue</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors" href="our-advocacy.html">Our Advocacy</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors" href="upcoming-events.html">Upcoming Events</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors" href="survey-results.html">Survey Results</a>
+<a class="text-primary border-b-2 border-primary font-label-md text-label-md" href="news.html">News</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors" href="about.html">About</a>
+</nav>
+<div class="flex gap-4 items-center">
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-label-md text-label-md cursor-pointer active:opacity-80 transition-all">Take Action</button>
+<button class="bg-secondary text-on-secondary px-6 py-2 rounded-lg font-label-md text-label-md cursor-pointer active:opacity-80 transition-all" onclick="window.location.reload()">Member Portal</button>
+</div>
+</div>
+</header>
+<main class="pt-32 pb-stack-lg max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<!-- Hero / Header Section -->
+<section class="mb-stack-lg">
+<div class="flex flex-col gap-stack-sm">
+<div class="flex flex-col md:flex-row md:items-baseline md:gap-4">
+<h1 class="font-display-lg text-display-lg text-on-surface max-w-4xl">Mass Save Budgetary Impact Briefing</h1>
+<span class="text-on-surface-variant font-label-sm uppercase tracking-wider">Last updated: June 2026</span>
+</div>
+<p class="text-on-surface-variant font-body-lg text-body-lg max-w-3xl mt-4">
+                    Mass Save's funding picture is changing fast. Here's what that means for the contractors who deliver the program and for the Massachusetts homeowners and businesses we serve.
+                </p>
+</div>
+</section>
+<!-- 10 Stat Cards Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-gutter mb-16">
+<!-- Card 1 -->
+<div class="bg-surface-cream p-8 rounded-xl border border-surface-warm-gray flex flex-col justify-between relative overflow-hidden group hover:border-secondary transition-colors">
+<div class="flex justify-between items-start mb-6">
+<span class="text-label-sm font-bold px-3 py-1 rounded-full bg-error/10 text-error uppercase tracking-tighter">1. ENACTED</span>
+</div>
+<div>
+<h2 class="font-headline-lg text-secondary mb-3">$500 Million Already Cut</h2>
+<p class="text-on-surface-variant font-body-md">Substantial program funding has been rescinded, directly impacting immediate weatherization and electrification deployment goals.</p>
+</div>
+<div class="mt-6 pt-4 border-t border-surface-warm-gray text-xs text-outline font-label-sm uppercase">Source: Mass.gov DPU press release, Feb. 28, 2025; Boston.com, May 2026.</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-cream p-8 rounded-xl border border-surface-warm-gray flex flex-col justify-between relative group hover:border-secondary transition-colors">
+<div class="flex justify-between items-start mb-6">
+<span class="text-label-sm font-bold px-3 py-1 rounded-full bg-error/10 text-error uppercase tracking-tighter">2. ENACTED</span>
+</div>
+<div>
+<h2 class="font-headline-lg text-secondary mb-3">Residential Budgets Cut 15-25%</h2>
+<p class="text-on-surface-variant font-body-md">Specific allocations for residential rebates and incentives have seen significant double-digit percentage reductions across multiple sectors.</p>
+</div>
+<div class="mt-6 pt-4 border-t border-surface-warm-gray text-xs text-outline font-label-sm uppercase">Source: Mass.gov DPU press release, Feb. 28, 2025.</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-cream p-8 rounded-xl border border-surface-warm-gray flex flex-col justify-between relative group hover:border-secondary transition-colors">
+<div class="flex justify-between items-start mb-6">
+<span class="text-label-sm font-bold px-3 py-1 rounded-full bg-secondary-container/20 text-on-secondary-container uppercase tracking-tighter">3. PENDING</span>
+</div>
+<div>
+<h2 class="font-headline-lg text-secondary mb-3">$1 Billion More on the Table</h2>
+<p class="text-on-surface-variant font-body-md">Further deep cuts are under active consideration, threatening to stall the momentum of the state's climate goals.</p>
+</div>
+<div class="mt-6 pt-4 border-t border-surface-warm-gray text-xs text-outline font-label-sm uppercase">Source: CommonWealth Beacon, Feb. 24, 2026; WBUR, Feb. 27, 2026.</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-cream p-8 rounded-xl border border-surface-warm-gray flex flex-col justify-between relative group hover:border-secondary transition-colors">
+<div class="flex justify-between items-start mb-6">
+<span class="text-label-sm font-bold px-3 py-1 rounded-full bg-slate-muted/10 text-slate-muted uppercase tracking-tighter">4. CONTESTED</span>
+</div>
+<div>
+<h2 class="font-headline-lg text-secondary mb-3">"Administrative Cuts" Don't Always Stay Administrative</h2>
+<p class="text-on-surface-variant font-body-md">Reductions framed as overhead savings often bleed into field operations, impacting service quality and turnaround times for customers.</p>
+</div>
+<div class="mt-6 pt-4 border-t border-surface-warm-gray text-xs text-outline font-label-sm uppercase">Source: WBUR, Feb. 27, 2026; MCIG industry correspondence.</div>
+</div>
+<!-- Card 5 -->
+<div class="bg-surface-cream p-8 rounded-xl border border-surface-warm-gray flex flex-col justify-between relative group hover:border-secondary transition-colors">
+<div class="flex justify-between items-start mb-6">
+<span class="text-label-sm font-bold px-3 py-1 rounded-full bg-slate-muted/10 text-slate-muted uppercase tracking-tighter">5. VERIFIED RESULT</span>
+</div>
+<div>
+<h2 class="font-headline-lg text-secondary mb-3">$16 Billion in Ratepayer Savings, At Risk</h2>
+<p class="text-on-surface-variant font-body-md">The long-term economic benefits of energy efficiency measures are being jeopardized by short-term budgetary withdrawals.</p>
+</div>
+<div class="mt-6 pt-4 border-t border-surface-warm-gray text-xs text-outline font-label-sm uppercase">Source: Massachusetts DPU, cited in Boston.com, May 2026.</div>
+</div>
+<!-- Card 6 -->
+<div class="bg-surface-cream p-8 rounded-xl border border-surface-warm-gray flex flex-col justify-between relative group hover:border-secondary transition-colors">
+<div class="flex justify-between items-start mb-6">
+<span class="text-label-sm font-bold px-3 py-1 rounded-full bg-error/10 text-error uppercase tracking-tighter">6. ENACTED, ONGOING RISK</span>
+</div>
+<div>
+<h2 class="font-headline-lg text-secondary mb-3">Contractors Plan in 3-Year Cycles. Cuts Don't Wait.</h2>
+<p class="text-on-surface-variant font-body-md">Sudden budget shifts disrupt business stability for small contractors who have invested in workforce training based on long-term state promises.</p>
+</div>
+<div class="mt-6 pt-4 border-t border-surface-warm-gray text-xs text-outline font-label-sm uppercase">Source: MCIG member survey, June 2026.</div>
+</div>
+<!-- Card 7 -->
+<div class="bg-surface-cream p-8 rounded-xl border border-surface-warm-gray flex flex-col justify-between relative group hover:border-secondary transition-colors">
+<div class="flex justify-between items-start mb-6">
+<span class="text-label-sm font-bold px-3 py-1 rounded-full bg-slate-muted/10 text-slate-muted uppercase tracking-tighter">7. DOCUMENTED INEQUITY</span>
+</div>
+<div>
+<h2 class="font-headline-lg text-secondary mb-3">Gateway City Residents Pay 24% More, Get Less Back</h2>
+<p class="text-on-surface-variant font-body-md">Program spending remains disproportionately lower in environmental justice communities, despite these residents contributing higher portions of their income to program funds.</p>
+</div>
+<div class="mt-6 pt-4 border-t border-surface-warm-gray text-xs text-outline font-label-sm uppercase">Source: Massachusetts State Auditor's Office, 2025; Boston.com, May 2026.</div>
+</div>
+<!-- Card 8 -->
+<div class="bg-surface-cream p-8 rounded-xl border border-surface-warm-gray flex flex-col justify-between relative group hover:border-secondary transition-colors">
+<div class="flex justify-between items-start mb-6">
+<span class="text-label-sm font-bold px-3 py-1 rounded-full bg-error/10 text-error uppercase tracking-tighter">8. ENACTED, CURRENT CYCLE</span>
+</div>
+<div>
+<h2 class="font-headline-lg text-secondary mb-3">A $220 Swing in What Contractors Get Paid</h2>
+<p class="text-on-surface-variant font-body-md">New RFQ structures have introduced extreme pricing volatility, making it impossible for many firms to maintain a professional, well-paid workforce.</p>
+</div>
+<div class="mt-6 pt-4 border-t border-surface-warm-gray text-xs text-outline font-label-sm uppercase">Source: Official 2026 Mass Save Weatherization RFQ documentation (wxpricebidding.com).</div>
+</div>
+<!-- Card 9 -->
+<div class="bg-surface-cream p-8 rounded-xl border border-surface-warm-gray flex flex-col justify-between relative group hover:border-secondary transition-colors">
+<div class="flex justify-between items-start mb-6">
+<span class="text-label-sm font-bold px-3 py-1 rounded-full bg-slate-muted/10 text-slate-muted uppercase tracking-tighter">9. UNRESOLVED</span>
+</div>
+<div>
+<h2 class="font-headline-lg text-secondary mb-3">Cutting the Program Doesn't Automatically Lower Bills</h2>
+<p class="text-on-surface-variant font-body-md">Reducing efficiency investments can lead to higher overall energy demand and market volatility, potentially increasing long-term ratepayer costs.</p>
+</div>
+<div class="mt-6 pt-4 border-t border-surface-warm-gray text-xs text-outline font-label-sm uppercase">Source: Boston.com, May 2026.</div>
+</div>
+<!-- Card 10 -->
+<div class="bg-surface-cream p-8 rounded-xl border border-surface-warm-gray flex flex-col justify-between relative group hover:border-secondary transition-colors">
+<div class="flex justify-between items-start mb-6">
+<span class="text-label-sm font-bold px-3 py-1 rounded-full bg-slate-muted/10 text-slate-muted uppercase tracking-tighter">10. AN ALTERNATIVE EXISTS</span>
+</div>
+<div>
+<h2 class="font-headline-lg text-secondary mb-3">There's a Path That Doesn't Cut Contractor Work</h2>
+<p class="text-on-surface-variant font-body-md">Stakeholders have proposed structural reforms that achieve fiscal responsibility without dismantling the workforce essential to the energy transition.</p>
+</div>
+<div class="mt-6 pt-4 border-t border-surface-warm-gray text-xs text-outline font-label-sm uppercase">Source: Boston.com, May 2026 (New Bedford Light/AP reporting).</div>
+</div>
+</section>
+<!-- Closing Section -->
+<section class="bg-surface-cream rounded-2xl p-stack-lg border border-primary/20 text-center max-w-4xl mx-auto">
+<h3 class="font-headline-md text-headline-md mb-4 text-on-surface">We're Not Asking to Stop the Conversation About Costs.</h3>
+<div class="text-on-surface-variant mb-8 px-4 max-w-2xl mx-auto space-y-4">
+<p class="">MCIG agrees that Massachusetts ratepayers deserve relief from rising energy bills. However, gutting the very programs designed to lower long-term costs is a counterproductive strategy that hurts small businesses and homeowners alike.</p>
+<p class="">We are advocating for a balanced approach that protects the "Green Collar" workforce while ensuring the Mass Save program remains efficient and equitable for all residents of the Commonwealth.</p>
+</div>
+<div class="flex flex-col md:flex-row gap-4 justify-center">
+
+<button class="bg-primary text-on-primary px-8 py-3 rounded-lg font-label-md transition-transform hover:scale-105">Join the Advocacy Group</button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container border-t border-secondary-neutral w-full py-stack-lg px-margin-desktop mt-16">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-gutter">
+<div class="font-headline-md text-headline-md font-bold text-on-surface">MCIG</div>
+<div class="flex gap-6">
+
+
+<a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md text-body-md" href="#">Contact Us: operations@MAContractorsGroup.com</a>
+
+</div>
+<p class="text-on-surface-variant font-body-md text-body-md text-center md:text-right">
+                © 2026 Massachusetts Residential Contractors Industry Group. All rights reserved.
+            </p>
+</div>
+</footer>
+
+
+
+
+</body></html>

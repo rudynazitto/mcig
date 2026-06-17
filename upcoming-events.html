@@ -1,0 +1,183 @@
+<!DOCTYPE html><html class="light" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>MCIG - Upcoming Events</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;600;700&amp;family=Work+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "terracotta-dark": "#C95B2A",
+                        "tertiary-fixed-dim": "#dcbfc5",
+                        "on-error": "#ffffff",
+                        "surface": "#fbf9f6",
+                        "surface-cream": "#F7F7F5",
+                        "primary": "#535e50",
+                        "on-primary": "#ffffff",
+                        "surface-dim": "#dcdad7",
+                        "primary-fixed": "#d9e6d4",
+                        "inverse-on-surface": "#f3f0ed",
+                        "on-background": "#1b1c1a",
+                        "on-surface": "#1b1c1a",
+                        "surface-variant": "#e4e2df",
+                        "secondary": "#a14005",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed": "#360f00",
+                        "surface-bright": "#fbf9f6",
+                        "on-primary-container": "#f2ffec",
+                        "tertiary": "#6c565b",
+                        "secondary-container": "#fd844a",
+                        "surface-container": "#f0edea",
+                        "surface-container-high": "#eae8e5",
+                        "inverse-surface": "#30302f",
+                        "on-secondary-container": "#6a2600",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed": "#141e13",
+                        "primary-container": "#6b7768",
+                        "on-tertiary-fixed": "#27171b",
+                        "inverse-primary": "#becab9",
+                        "slate-muted": "#5A6657",
+                        "on-secondary-fixed-variant": "#7c2e00",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed": "#f9dbe1",
+                        "background": "#fbf9f6",
+                        "surface-container-highest": "#e4e2df",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-warm-gray": "#E8E6E0",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-container": "#fffaff",
+                        "primary-fixed-dim": "#becab9",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-container": "#866e73",
+                        "secondary-fixed-dim": "#ffb596",
+                        "surface-tint": "#566253",
+                        "surface-container-low": "#f6f3f0",
+                        "secondary-fixed": "#ffdbcd",
+                        "on-primary-fixed-variant": "#3e4a3c",
+                        "on-tertiary-fixed-variant": "#564146",
+                        "outline-variant": "#c4c8c0",
+                        "outline": "#747872",
+                        "on-surface-variant": "#444842"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-lg": "32px",
+                        "gutter": "24px",
+                        "stack-md": "16px",
+                        "unit": "4px",
+                        "container-max": "1280px",
+                        "stack-sm": "8px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "48px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["\"Source Serif 4\""],
+                        "headline-md": ["\"Source Serif 4\""],
+                        "body-md": ["Work Sans"],
+                        "headline-lg": ["\"Source Serif 4\""],
+                        "display-lg": ["\"Source Serif 4\""],
+                        "label-md": ["Work Sans"],
+                        "label-sm": ["Work Sans"],
+                        "body-lg": ["Work Sans"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .icon-fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-surface-container-lowest dark:bg-inverse-surface text-primary dark:text-primary-fixed-dim font-label-md text-label-md w-full sticky top-0 z-50 border-b border-surface-warm-gray dark:border-outline-variant shadow-sm transition-colors duration-200">
+<div class="flex justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop h-20">
+<div class="font-headline-md text-headline-md font-bold text-on-surface dark:text-inverse-on-surface">MCIG</div>
+<nav class="hidden md:flex gap-gutter items-center">
+<a class="text-on-surface dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-colors duration-200 px-3 py-2 rounded-DEFAULT" href="index.html">Home</a>
+<a class="text-on-surface dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-colors duration-200 px-3 py-2 rounded-DEFAULT" href="the-pricing-issue.html">The Pricing Issue</a>
+<a class="text-on-surface dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-colors duration-200 px-3 py-2 rounded-DEFAULT" href="our-advocacy.html">Our Advocacy</a>
+<a class="text-primary dark:text-primary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim pb-1 opacity-80 transition-opacity hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-colors duration-200 px-3 py-2 rounded-DEFAULT" href="upcoming-events.html">Upcoming Events</a>
+<a class="text-on-surface dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-colors duration-200 px-3 py-2 rounded-DEFAULT" href="survey-results.html">Survey Results</a>
+<a class="text-on-surface dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-colors duration-200 px-3 py-2 rounded-DEFAULT" href="news.html">News</a>
+<a class="text-on-surface dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-colors duration-200 px-3 py-2 rounded-DEFAULT" href="about.html">About</a>
+</nav>
+<div class="hidden md:block">
+<button class="bg-terracotta-dark text-on-error font-label-md text-label-md px-4 py-2 rounded-DEFAULT hover:bg-secondary-container transition-colors duration-200">Join MCIG</button>
+</div>
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg md:py-16">
+<!-- Page Header -->
+<div class="mb-16 md:mb-24 text-center max-w-3xl mx-auto">
+<h1 class="font-display-lg text-display-lg md:text-display-lg text-on-surface mb-stack-md">Upcoming Events &amp; Hearings</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Stay informed and engaged. Join our advocacy meetings, attend public hearings, and participate in industry webinars crucial to the residential contracting community in Massachusetts.</p>
+</div>
+<!-- Divider -->
+<div class="flex items-center justify-center my-12 opacity-60">
+<div class="h-px bg-surface-warm-gray w-24"></div>
+<span class="material-symbols-outlined mx-4 text-primary" data-icon="construction">construction</span>
+<div class="h-px bg-surface-warm-gray w-24"></div>
+</div><section class="py-24 text-center max-w-2xl mx-auto">
+    <div class="bg-surface-container-low rounded-xl p-stack-lg border border-surface-warm-gray">
+        <span class="material-symbols-outlined text-primary text-display-lg mb-4" data-icon="event_note">event_note</span>
+        <h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Upcoming Events</h2>
+        <p class="font-body-lg text-body-lg text-on-surface-variant">
+            Check back for upcoming in person events about the future of the Mass Save program!
+        </p>
+    </div>
+</section>
+<!-- Featured Event (Bento Style) -->
+
+<!-- Monthly Calendar Grid -->
+
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-high dark:bg-surface-container-highest text-primary dark:text-primary-fixed-dim font-body-md text-body-md w-full py-stack-lg border-t border-surface-warm-gray dark:border-outline-variant">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop gap-gutter">
+<div class="font-headline-md text-headline-md font-bold text-on-surface dark:text-inverse-on-surface text-center md:text-left">
+                MCIG
+                <p class="font-label-sm text-label-sm font-normal text-on-surface-variant mt-1">© 2026 Massachusetts Residential Contractors Industry Group (MCIG). All rights reserved.</p>
+</div>
+<nav class="flex flex-wrap justify-center md:justify-end gap-6">
+
+
+
+
+</nav>
+</div>
+</footer>
+
+
+
+
+</body></html>

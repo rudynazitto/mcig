@@ -1,0 +1,360 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>News &amp; Resources | MCIG</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;family=Work+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-bright": "#fbf9f6",
+                      "on-primary-container": "#f2ffec",
+                      "on-secondary-fixed-variant": "#7c2e00",
+                      "surface-container-lowest": "#ffffff",
+                      "slate-muted": "#5A6657",
+                      "secondary-fixed-dim": "#ffb596",
+                      "surface-container-low": "#f6f3f0",
+                      "on-error": "#ffffff",
+                      "on-tertiary": "#ffffff",
+                      "surface-container": "#f0edea",
+                      "on-tertiary-container": "#fffaff",
+                      "surface-dim": "#dcdad7",
+                      "primary-fixed": "#d9e6d4",
+                      "inverse-on-surface": "#f3f0ed",
+                      "surface-cream": "#F7F7F5",
+                      "on-primary-fixed-variant": "#3e4a3c",
+                      "on-primary": "#ffffff",
+                      "surface-container-high": "#eae8e5",
+                      "on-tertiary-fixed": "#27171b",
+                      "outline-variant": "#c4c8c0",
+                      "on-secondary-fixed": "#360f00",
+                      "secondary": "#a14005",
+                      "background": "#fbf9f6",
+                      "outline": "#747872",
+                      "surface-tint": "#566253",
+                      "error-container": "#ffdad6",
+                      "on-surface": "#1b1c1a",
+                      "on-surface-variant": "#444842",
+                      "on-background": "#1b1c1a",
+                      "on-secondary-container": "#6a2600",
+                      "tertiary-fixed-dim": "#dcbfc5",
+                      "tertiary": "#6c565b",
+                      "surface-container-highest": "#e4e2df",
+                      "on-primary-fixed": "#141e13",
+                      "inverse-surface": "#30302f",
+                      "terracotta-dark": "#C95B2A",
+                      "on-secondary": "#ffffff",
+                      "on-tertiary-fixed-variant": "#564146",
+                      "inverse-primary": "#becab9",
+                      "secondary-fixed": "#ffdbcd",
+                      "primary": "#535e50",
+                      "surface-warm-gray": "#E8E6E0",
+                      "secondary-container": "#fd844a",
+                      "primary-container": "#6b7768",
+                      "error": "#ba1a1a",
+                      "surface-variant": "#e4e2df",
+                      "on-error-container": "#93000a",
+                      "tertiary-fixed": "#f9dbe1",
+                      "surface": "#fbf9f6",
+                      "tertiary-container": "#866e73",
+                      "primary-fixed-dim": "#becab9"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "20px",
+                      "gutter": "24px",
+                      "margin-desktop": "48px",
+                      "stack-md": "16px",
+                      "stack-sm": "8px",
+                      "stack-lg": "32px",
+                      "container-max": "1280px",
+                      "unit": "4px"
+              },
+              "fontFamily": {
+                      "headline-md": ["\"Source Serif 4\""],
+                      "label-sm": ["Work Sans"],
+                      "display-lg": ["\"Source Serif 4\""],
+                      "headline-lg-mobile": ["\"Source Serif 4\""],
+                      "headline-lg": ["\"Source Serif 4\""],
+                      "label-md": ["Work Sans"],
+                      "body-md": ["Work Sans"],
+                      "body-lg": ["Work Sans"]
+              },
+              "fontSize": {
+                      "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                      "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                      "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .decorative-divider {
+            position: relative;
+            height: 1px;
+            background-color: #E8E6E0;
+            margin: 3rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .decorative-divider::after {
+            content: "hardware";
+            font-family: 'Material Symbols Outlined';
+            background-color: #fbf9f6;
+            padding: 0 1rem;
+            color: #6B7768;
+            font-size: 1.25rem;
+        }
+    </style>
+</head>
+<body class="bg-surface-bright text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<header class="docked full-width top-0 sticky z-50 bg-surface dark:bg-surface-dim shadow-sm">
+<nav class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-on-surface dark:text-inverse-on-surface">MCIG</div>
+<div class="hidden md:flex items-center gap-8"><a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="index.html">Home</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="the-pricing-issue.html">The Pricing Issue</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="our-advocacy.html">Our Advocacy</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="upcoming-events.html">Upcoming Events</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="survey-results.html">Survey Results</a>
+<a class="font-label-md text-label-md text-primary border-b-3 border-primary pb-1" href="news.html">News</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="about.html">About</a></div>
+<div class="flex items-center gap-4">
+<button class="bg-secondary-container text-on-primary px-6 py-2 rounded-lg font-label-md hover:bg-secondary-fixed transition-colors active:scale-95 duration-150">Join MCIG</button>
+<button class="md:hidden flex items-center justify-center p-2 rounded-lg hover:bg-surface-container">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+</header>
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg">
+<!-- Hero Title Section -->
+<section class="mb-16">
+<h1 class="font-display-lg text-display-lg mb-4 text-primary">News &amp; Resources</h1>
+<p class="max-w-2xl text-on-surface-variant font-body-lg">Stay informed on the legislative and regulatory developments impacting the Massachusetts residential contracting industry. Access our latest filings, reports, and news updates.</p>
+</section>
+<!-- News Grid (Bento Style) -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-20">
+<!-- Featured: Auditor Report -->
+<div class="md:col-span-8 group relative bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.1)] transition-all duration-300">
+<div class="h-64 md:h-80 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A professional, wide-angle shot of a classic Massachusetts state house interior with warm wood panels and soft overhead lighting. The atmosphere is quiet, institutional, and focused on civic governance, rendered in a high-key, modern aesthetic with earthy green and cream tones consistent with the MCIG brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSgvkpjd9NWkz6Vxv65WR_Dp-xUtEww8w-ycdQVknLE8UjxOjZeiiDgr9c4Ex0832Gm_OWwEEgfkrBeeYe_WwOEXnyG2dnpG7QwAJwIHW_VNQ3SEiIbj3Y_ltxVoip5FpCbhrZzdvn-tm77HXBY7N_dIrZoqQBVBquJ208wZim48NwlUjvhqBGvWTp0xq5gUYMogK95PLjtL-jb5M4w1m6xpLPLt0um9wZfdwJ6teuGIMs4H5JBMQZnWg5xAFkYN1l5LxGfium8sU">
+</div>
+<div class="p-8">
+<div class="flex items-center gap-2 mb-4">
+<span class="bg-primary-container text-on-primary-container text-label-sm px-3 py-1 rounded-full">Regulatory Report</span>
+<span class="text-on-surface-variant font-label-sm">September 2025</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg mb-4 group-hover:text-primary transition-colors">Sept 2024 Auditor Report: Examining Efficiency in Residential Contracting Compliance</h2>
+<p class="text-on-surface-variant mb-6 font-body-md line-clamp-2">A comprehensive audit reveals critical gaps in current regulatory frameworks, suggesting a path forward for increased transparency and streamlined contractor certification processes in the Commonwealth.</p>
+<a class="inline-flex items-center gap-2 font-label-md text-primary hover:text-secondary-container transition-colors" href="#">
+                        Read Full Report <span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 0;">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Legislative Cuts -->
+<div class="md:col-span-4 flex flex-col gap-gutter">
+<div class="flex-1 bg-surface-container-lowest p-8 rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.1)] transition-all">
+<span class="text-secondary font-label-sm uppercase tracking-wider mb-2 block">Alert</span>
+<h3 class="font-headline-md text-headline-md mb-4">Legislative Budget Adjustments</h3>
+<p class="text-on-surface-variant font-body-md mb-6">Recent legislative sessions have proposed significant cuts to housing infrastructure and contractor incentive programs.</p>
+<a class="font-label-md text-primary inline-flex items-center gap-1 group" href="{{DATA:SCREEN:SCREEN_50}}">
+                        Impact Analysis <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" style="font-variation-settings: &quot;FILL&quot; 0;">chevron_right</span>
+</a>
+</div>
+<div class="flex-1 bg-surface-container-lowest p-8 rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.1)] transition-all border-l-4 border-secondary-container">
+<span class="text-on-surface-variant font-label-sm mb-2 block">Industry Update</span>
+<h3 class="font-headline-md text-headline-md mb-4">DPU Proposes $500M Program Reduction</h3>
+<p class="text-on-surface-variant font-body-md mb-6">The Department of Public Utilities (DPU) signals shifts in funding for residential energy efficiency projects.</p>
+<a class="font-label-md text-primary inline-flex items-center gap-1 group" href="#">
+                        MCIG Response <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" style="font-variation-settings: &quot;FILL&quot; 0;">chevron_right</span>
+</a>
+</div>
+</div>
+</section>
+<div class="decorative-divider"></div>
+<!-- MCIG Filings Section -->
+<section class="py-12">
+<div class="flex flex-col md:flex-row justify-between items-end mb-10 gap-4">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary">Official MCIG Filings</h2>
+<p class="text-on-surface-variant font-body-md">Our formal submissions to state agencies and legislative bodies.</p>
+</div>
+
+</div>
+<div class="space-y-4">
+<!-- Filing Item 1 -->
+<div class="flex flex-col md:flex-row md:items-center justify-between p-6 bg-surface-container rounded-xl hover:bg-surface-container-high transition-colors group">
+<div class="flex items-start gap-6">
+<div class="w-12 h-12 rounded-lg bg-surface-container-lowest flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: &quot;FILL&quot; 0;">description</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-1">Public Comment on 2025-2027 RFQ</h4>
+<p class="text-on-surface-variant font-body-md">Formal advocacy regarding the Request for Qualifications process for state residential energy programs.</p>
+<div class="flex gap-4 mt-2">
+<span class="text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">calendar_today</span> Oct 12, 2024
+                                </span>
+<span class="text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">history_edu</span> Regulatory Filing
+                                </span>
+</div>
+</div>
+</div>
+<div class="mt-6 md:mt-0 flex gap-3">
+<a class="flex items-center gap-2 bg-primary text-on-primary px-5 py-2.5 rounded-lg font-label-md hover:shadow-md transition-all" href="#"></a>
+<button class="p-2.5 rounded-lg border border-outline-variant text-on-surface-variant hover:bg-surface-container-lowest">
+<span class="material-symbols-outlined">share</span>
+</button>
+</div>
+</div>
+<!-- Filing Item 2 -->
+<div class="flex flex-col md:flex-row md:items-center justify-between p-6 bg-surface-container rounded-xl hover:bg-surface-container-high transition-colors group">
+<div class="flex items-start gap-6">
+<div class="w-12 h-12 rounded-lg bg-surface-container-lowest flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: &quot;FILL&quot; 0;">mail</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-1">Letter to EEAC on 2028-2030 Planning</h4>
+<p class="text-on-surface-variant font-body-md">Strategic input to the Energy Efficiency Advisory Council on long-term industry sustainability goals.</p>
+<div class="flex gap-4 mt-2">
+<span class="text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">calendar_today</span> Aug 28, 2024
+                                </span>
+<span class="text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">forum</span> Correspondence
+                                </span>
+</div>
+</div>
+</div>
+<div class="mt-6 md:mt-0 flex gap-3">
+<a class="flex items-center gap-2 bg-primary text-on-primary px-5 py-2.5 rounded-lg font-label-md hover:shadow-md transition-all" href="#"></a>
+<button class="p-2.5 rounded-lg border border-outline-variant text-on-surface-variant hover:bg-surface-container-lowest">
+<span class="material-symbols-outlined">share</span>
+</button>
+</div>
+</div>
+</div>
+<!-- View All CTA -->
+<div class="mt-10 text-center">
+<button class="px-8 py-3 bg-surface-container-highest text-on-surface font-label-md rounded-lg hover:bg-outline-variant transition-colors">
+                    Email <b>operations@MAContractorsGroup.com </b>for copies.</button>
+</div>
+</section>
+<!-- Newsletter / Contact Block -->
+<section class="mt-20 mb-12 bg-primary-container rounded-2xl p-10 md:p-16 flex flex-col md:flex-row items-center gap-12 relative overflow-hidden">
+<!-- Decorative Background Element -->
+<div class="absolute right-0 top-0 opacity-10 pointer-events-none">
+<span class="material-symbols-outlined text-[300px] leading-none translate-x-1/4 -translate-y-1/4">engineering</span>
+</div>
+<div class="relative z-10 md:w-1/2">
+<h3 class="font-display-lg text-headline-lg text-on-primary-container mb-4">Stay at the Forefront of the Industry</h3>
+<p class="text-on-primary-container opacity-90 font-body-lg">Get real-time legislative alerts and professional updates delivered to your inbox.</p>
+</div>
+<div class="relative z-10 md:w-1/2 w-full">
+<form class="flex flex-col sm:flex-row gap-3">
+<input class="flex-grow px-5 py-4 rounded-xl bg-surface-bright border-none focus:ring-2 focus:ring-secondary-container placeholder:text-outline font-body-md" placeholder="Professional Email" type="email">
+<button class="bg-secondary-container text-on-primary px-8 py-4 rounded-xl font-label-md hover:bg-terracotta-dark shadow-lg transition-all" type="submit">Subscribe Now</button>
+</form>
+<p class="mt-4 text-label-sm text-on-primary-container opacity-70">By subscribing, you agree to receive MCIG communications. We respect your privacy.</p>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-surface-container-highest dark:bg-surface-container-low border-t border-secondary-neutral dark:border-outline-variant">
+<div class="w-full px-margin-desktop py-stack-lg max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<!-- Brand Column -->
+<div class="space-y-6">
+<div class="font-headline-md text-headline-md text-primary dark:text-primary-container">MCIG</div>
+<p class="text-on-surface-variant font-body-md">Professionalism. Partnership. Trust. Empowering Massachusetts residential contractors through focused advocacy.</p>
+</div>
+<!-- Links Column 1 -->
+<div>
+<h5 class="font-label-md text-on-surface mb-6 uppercase tracking-wider">Advocacy</h5>
+<ul class="space-y-4">
+<li class=""><a class="font-label-sm text-on-surface-variant hover:text-secondary transition-colors" href="#">Current Pricing Issues</a></li>
+
+
+<li class=""></li>
+</ul>
+</div>
+<!-- Links Column 2 -->
+<div>
+<h5 class="font-label-md text-on-surface mb-6 uppercase tracking-wider">Resources</h5>
+<ul class="space-y-4">
+<li class=""><a class="font-label-sm text-primary font-bold" href="#">News &amp; Updates</a></li>
+<li class=""><a class="font-label-sm text-on-surface-variant hover:text-secondary transition-colors" href="#">Industry Reports</a></li>
+<li class=""><a class="font-label-sm text-on-surface-variant hover:text-secondary transition-colors" href="#">MCIG Filings</a></li>
+<li class=""><a class="font-label-sm text-on-surface-variant hover:text-secondary transition-colors" href="#">Compliance Guide</a></li>
+</ul>
+</div>
+<!-- Social/Contact Column -->
+<div>
+<h5 class="font-label-md text-on-surface mb-6 uppercase tracking-wider">Get Involved</h5>
+<ul class="space-y-4">
+<li class=""><a class="font-label-sm text-on-surface-variant hover:text-secondary transition-colors" href="#">Join MCIG Today</a></li>
+<li class=""></li>
+<li class=""></li>
+
+</ul>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop py-6 border-t border-outline-variant flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="text-label-sm text-on-surface-variant">© 2026 Massachusetts Residential Contractors Industry Group (MCIG). All rights reserved.</div>
+<div class="flex gap-6">
+<a class="text-label-sm text-on-surface-variant hover:text-secondary" href="#">Privacy Policy</a>
+<a class="text-label-sm text-on-surface-variant hover:text-secondary" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple scroll behavior for header elevation
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-md');
+                header.classList.remove('shadow-sm');
+            } else {
+                header.classList.add('shadow-sm');
+                header.classList.remove('shadow-md');
+            }
+        });
+
+        // Hover animation for filing icons
+        document.querySelectorAll('.group').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                const icon = item.querySelector('.material-symbols-outlined');
+                if (icon) icon.style.fontVariationSettings = "'FILL' 1";
+            });
+            item.addEventListener('mouseleave', () => {
+                const icon = item.querySelector('.material-symbols-outlined');
+                if (icon) icon.style.fontVariationSettings = "'FILL' 0";
+            });
+        });
+    </script>
+
+
+
+
+</body></html>
