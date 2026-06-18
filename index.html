@@ -283,9 +283,41 @@
 <div class="relative group">
 <div class="absolute inset-0 bg-primary/5 rounded-3xl -rotate-2 scale-105 group-hover:rotate-0 transition-transform duration-500"></div>
 <div class="relative bg-white p-4 rounded-3xl shadow-level-2 overflow-hidden">
-<img alt="Contractor survey results showing a clear trend of industry challenges and policy impacts" class="w-full h-auto rounded-2xl" src="images/img-04.jpg">
+<!-- Hero Image Carousel -->
+<div class="relative overflow-hidden rounded-2xl" id="hero-carousel-wrap">
+<div class="flex transition-transform duration-700 ease-in-out" id="hero-carousel" style="width:200%">
+<img alt="Massachusetts Residential Contractors Industry Group" class="w-1/2 h-auto object-cover" src="images/img-04.jpg">
+<img alt="Professional contractors reviewing plans on a construction site" class="w-1/2 h-auto object-cover" src="images/img-03.jpg">
+</div>
+<!-- Dots -->
+<div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
+<button onclick="heroGo(0)" id="hero-dot-0" class="w-2.5 h-2.5 rounded-full bg-white shadow transition-all opacity-100" aria-label="Slide 1"></button>
+<button onclick="heroGo(1)" id="hero-dot-1" class="w-2.5 h-2.5 rounded-full bg-white shadow transition-all opacity-50" aria-label="Slide 2"></button>
+</div>
+<!-- Arrows -->
+<button onclick="heroStep(-1)" class="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/80 shadow flex items-center justify-center hover:bg-white transition-all">
+<span class="material-symbols-outlined text-primary text-[18px]">chevron_left</span>
+</button>
+<button onclick="heroStep(1)" class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/80 shadow flex items-center justify-center hover:bg-white transition-all">
+<span class="material-symbols-outlined text-primary text-[18px]">chevron_right</span>
+</button>
 </div>
 </div>
+</div>
+<script>
+(function(){
+  var cur=0, total=2, timer;
+  window.heroGo=function(idx){
+    cur=(idx+total)%total;
+    document.getElementById('hero-carousel').style.transform='translateX(-'+(cur*50)+'%)';
+    [0,1].forEach(function(i){
+      document.getElementById('hero-dot-'+i).style.opacity= i===cur?'1':'0.5';
+    });
+  };
+  window.heroStep=function(d){ heroGo(cur+d); };
+  timer=setInterval(function(){ heroGo(cur+1); },4000);
+})();
+</script>
 </div>
 <!-- Atmospheric Pattern -->
 <div class="absolute right-0 top-0 w-1/3 h-full opacity-5 pointer-events-none transition-all duration-700 ease-out opacity-100 translate-y-0">
