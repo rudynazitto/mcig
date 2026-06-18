@@ -519,7 +519,14 @@ Our members perform the vast majority of residential energy audits and weatheriz
 <div class="snap-center shrink-0 w-full md:w-[700px] bg-white p-8 rounded-2xl shadow-lg border border-secondary-neutral flex flex-col">
 <span class="material-symbols-outlined text-secondary text-4xl mb-4" style="font-variation-settings: &quot;FILL&quot; 1;">format_quote</span>
 <p class="font-body-lg text-body-lg italic text-on-surface-variant mb-6 leading-relaxed">
-"The program needs to change. It needs a change at the administrative level because they don't know what they're doing and at the lead vendor level because they don't care what they're doing. Year after year, we're asked to absorb cuts, accept unfair pricing, and carry the burden of decisions made without meaningful input from those most affected. The people making these decisions see us as a problem to manage rather than partners in delivering essential services. Enough is enough."
+"The program needs to change. It needs a change at the administrative level because they don't know what they're doing and at the lead vendor level because they don't care what they're doing."
+</p>
+</div>
+<!-- Quote 3 -->
+<div class="snap-center shrink-0 w-full md:w-[700px] bg-white p-8 rounded-2xl shadow-lg border border-secondary-neutral flex flex-col">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4" style="font-variation-settings: &quot;FILL&quot; 1;">format_quote</span>
+<p class="font-body-lg text-body-lg italic text-on-surface-variant mb-6 leading-relaxed">
+"We're asked to absorb cuts, accept unfair pricing, and carry the burden of decisions made without meaningful input from those most affected. The people making these decisions see us as a problem to manage rather than partners in delivering essential services. Enough is enough."
 </p>
 </div>
 </div>
@@ -531,6 +538,8 @@ Our members perform the vast majority of residential energy audits and weatheriz
 <div class="flex items-center gap-2">
 <div class="active-dot" id="home-dot-0"></div>
 <div class="inactive-dot" id="home-dot-1"></div>
+<div class="inactive-dot" id="home-dot-2"></div>
+<div class="inactive-dot" id="home-dot-2"></div>
 </div>
 <button class="w-12 h-12 flex items-center justify-center rounded-full border border-primary text-primary hover:bg-primary hover:text-white transition-all" onclick="scrollHomeCarousel(1)">
 <span class="material-symbols-outlined">chevron_right</span>
@@ -542,7 +551,7 @@ Our members perform the vast majority of residential energy audits and weatheriz
 <script>
 (function() {
   var carousel = document.getElementById('home-quote-carousel');
-  var dots = [document.getElementById('home-dot-0'), document.getElementById('home-dot-1')];
+  var dots = [document.getElementById('home-dot-0'), document.getElementById('home-dot-1'), document.getElementById('home-dot-2')];
   var current = 0;
   window.scrollHomeCarousel = function(dir) {
     current = (current + dir + dots.length) % dots.length;
